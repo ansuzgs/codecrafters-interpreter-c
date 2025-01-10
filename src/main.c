@@ -73,16 +73,14 @@ int main(int argc, char *argv[]) {
                         }
                         i++;
                     }
-printf("STRING");
                     if (file_contents[i] == '\0') {
                         fprintf(stderr, "[line %u] Error: Unterminated string.\n", line_counter);
                         error_flag = TRUE;
                     } else {
-                        int len = str_start - i;
+                        int len = i - str_start;
                         char *literal = (char *)malloc(len + 1);
                         strncpy(literal, &file_contents[str_start], len);
                         literal[len] = '\0';
-                        printf("in");
                         printf("STRING \"%s\" %s\n", literal, literal);
                         free(literal);
                     }
