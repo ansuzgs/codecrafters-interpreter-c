@@ -33,6 +33,12 @@ int main(int argc, char *argv[]) {
                 case ')':
                     printf("RIGHT_PAREN ) null\n");
                     break;
+                case '{':
+                    printf("LEFT_BRACE { null\n");
+                    break;
+                case '}':
+                    printf("RIGHT_BRACE } null\n");
+                    break;
                 }
             }
         }
