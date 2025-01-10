@@ -53,6 +53,10 @@ int main(int argc, char *argv[]) {
                     break;
                 case '-':
                     printf("MINUS - null\n");
+                    break;
+                case ';':
+                    printf("SEMICOLON ; null\n");
+                    break;
                 }
             }
         }
