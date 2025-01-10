@@ -62,6 +62,23 @@ int main(int argc, char *argv[]) {
                 case ';':
                     printf("SEMICOLON ; null\n");
                     break;
+                case '<':
+                    if (file_contents[i+1] == '=') {
+                        printf("LESS_EQUAL <= null\n");
+                        i++;
+                    } else {
+                        printf("LESS < null\n");
+                    }
+                    break;
+                case '>':
+                    if (file_contents[i+1] == '=') {
+                        printf("GREATER_EQUAL >= null\n");
+                        i++;
+                    } else {
+                        printf("GREATER > null\n");
+                    }
+                    break;
+
                 case '!':
                     if (file_contents[i+1] == '=') {
                         printf("BANG_EQUAL != null\n");
@@ -70,6 +87,7 @@ int main(int argc, char *argv[]) {
                         printf("BANG ! null\n");
                     }
                     break;
+
                 case '=':
                     if(file_contents[i+1] == '=') {
                         printf("EQUAL_EQUAL == null\n");
