@@ -78,9 +78,9 @@ printf("STRING");
                         fprintf(stderr, "[line %u] Error: Unterminated string.\n", line_counter);
                         error_flag = TRUE;
                     } else {
-                        printf("in");
                         int len = str_start - i;
                         char *literal = (char *)malloc(len + 1);
+                        printf("in");
                         strncpy(literal, &file_contents[str_start], len);
                         literal[len] = '\0';
                         printf("STRING \"%s\" %s\n", literal, literal);
