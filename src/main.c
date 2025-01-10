@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
                     break;
                 case '/':
                     if (file_contents[i+1] == '/') {
-                        while(file_contents[i++] != '\n');
+                        while(file_contents[i++] != '\n' || file_contents[i++] != '\n');
                         i-=2;
                     } else {
                         printf("SLASH / null\n");
