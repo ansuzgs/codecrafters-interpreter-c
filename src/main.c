@@ -62,6 +62,14 @@ int main(int argc, char *argv[]) {
                 case ';':
                     printf("SEMICOLON ; null\n");
                     break;
+                case '/':
+                    if (file_contents[i+1] == '/') {
+                        while(file_contents[i++] != '\0');
+                        break;
+                    } else {
+                        printf("SLASH / null\n");
+                    }
+                    break;
                 case '<':
                     if (file_contents[i+1] == '=') {
                         printf("LESS_EQUAL <= null\n");
