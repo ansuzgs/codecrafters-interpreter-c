@@ -57,6 +57,9 @@ int main(int argc, char *argv[]) {
                 case ';':
                     printf("SEMICOLON ; null\n");
                     break;
+                default:
+                    fprintf(stderr, "[line 1] Error: Unexpected character: %c\n", file_contents[i]);
+                    break;
                 }
             }
         }
