@@ -112,7 +112,7 @@ int main(int argc, char *argv[]) {
                     line_counter++;
                     break;
                 default:
-                    fprintf(stderr, "[line %ud] Error: Unexpected character: %c\n", line_counter, file_contents[i]);
+                    fprintf(stderr, "[line %u] Error: Unexpected character: %c\n", line_counter, file_contents[i]);
                     error_flag = TRUE;
                     break;
                 }
