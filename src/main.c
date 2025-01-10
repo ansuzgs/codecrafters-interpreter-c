@@ -69,6 +69,7 @@ int main(int argc, char *argv[]) {
                     } else {
                         printf("EQUAL = null\n");
                     }
+                    break;
                 default:
                     fprintf(stderr, "[line 1] Error: Unexpected character: %c\n", file_contents[i]);
                     error_flag = TRUE;
