@@ -62,6 +62,13 @@ int main(int argc, char *argv[]) {
                 case ';':
                     printf("SEMICOLON ; null\n");
                     break;
+                case '=':
+                    if(file_contents[i+1] == '=') {
+                        printf("EQUAL_EQUAL == null\n");
+                        i++;
+                    } else {
+                        printf("EQUAL = null\n");
+                    }
                 default:
                     fprintf(stderr, "[line 1] Error: Unexpected character: %c\n", file_contents[i]);
                     error_flag = TRUE;
