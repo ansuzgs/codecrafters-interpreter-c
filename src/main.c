@@ -63,6 +63,29 @@ int main(int argc, char *argv[]) {
                 case ';':
                     printf("SEMICOLON ; null\n");
                     break;
+                case '"':
+                    i++;
+                    int str_start = i;
+
+                    while (file_contents[i] != '"' && file_contents[i] != '\0') {
+                        if (file_contents[i] == '\n') {
+                            line_counter++;
+                        }
+                        i++;
+                    }
+
+                    if (file_contents[i] == '\0') {
+                        fprintf(stderr, "[line %u] Error: Unterminated string.\n", line_counter);
+                        error_flag = TRUE;
+                    } else {
+                        int len = str_start - i;
+                        char *literal = (char *)malloc(len + 1);
+                        strncpy(literal, &file_contents[str_start], len);
+                        literal[len] = '\0';
+                        printf("STRING \"%s\" %s\n", literal, literal);
+                        free(literal);
+                    }
+                    break;
                 case '/':
                     if (file_contents[i+1] == '/') {
                         while(i < strlen(file_contents) && file_contents[i] != '\n'){
