@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
                         }
                         i++;
                     }
-
+printf("STRING");
                     if (file_contents[i] == '\0') {
                         fprintf(stderr, "[line %u] Error: Unterminated string.\n", line_counter);
                         error_flag = TRUE;
