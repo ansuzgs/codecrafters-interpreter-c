@@ -80,9 +80,9 @@ printf("STRING");
                     } else {
                         int len = str_start - i;
                         char *literal = (char *)malloc(len + 1);
-                        printf("in");
                         strncpy(literal, &file_contents[str_start], len);
                         literal[len] = '\0';
+                        printf("in");
                         printf("STRING \"%s\" %s\n", literal, literal);
                         free(literal);
                     }
