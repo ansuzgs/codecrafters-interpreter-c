@@ -106,7 +106,7 @@ int main(int argc, char *argv[]) {
                     break;
                 case '\t':
                 case ' ':
-                case '\n'
+                case '\n':
                     break;
                 default:
                     fprintf(stderr, "[line 1] Error: Unexpected character: %c\n", file_contents[i]);
