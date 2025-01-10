@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define TRUE (1==1)
+#define FALSE !TRUE
+
 char *read_file_contents(const char *filename);
 
 int main(int argc, char *argv[]) {
@@ -13,6 +16,8 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "Usage: ./your_program tokenize <filename>\n");
         return 1;
     }
+
+    int error_flag = FALSE;
 
     const char *command = argv[1];
 
@@ -59,6 +64,7 @@ int main(int argc, char *argv[]) {
                     break;
                 default:
                     fprintf(stderr, "[line 1] Error: Unexpected character: %c\n", file_contents[i]);
+                    error_flag = TRUE;
                     break;
                 }
             }
@@ -72,6 +78,9 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    if (error_flag) {
+        return 65;
+    }
     return 0;
 }
 
