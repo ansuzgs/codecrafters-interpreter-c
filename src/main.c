@@ -65,6 +65,7 @@ int main(int argc, char *argv[]) {
                 case '!':
                     if (file_contents[i+1] == '=') {
                         printf("BANG_EQUAL != null\n");
+                        i++;
                     } else {
                         printf("BANG ! null\n");
                     }
