@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "Logs from your program will appear here!\n");
 
         char *file_contents = read_file_contents(argv[2]);
-        unsigned int line_counter = 1;
+        unsigned int line_counter = 0;
 
         // Uncomment this block to pass the first stage
         if (strlen(file_contents) > 0) {
