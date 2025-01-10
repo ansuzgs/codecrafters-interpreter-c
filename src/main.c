@@ -27,6 +27,7 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "Logs from your program will appear here!\n");
 
         char *file_contents = read_file_contents(argv[2]);
+        unsigned int line_counter = 1;
 
         // Uncomment this block to pass the first stage
         if (strlen(file_contents) > 0) {
@@ -106,10 +107,12 @@ int main(int argc, char *argv[]) {
                     break;
                 case '\t':
                 case ' ':
+                    break;
                 case '\n':
+                    line_counter++;
                     break;
                 default:
-                    fprintf(stderr, "[line 1] Error: Unexpected character: %c\n", file_contents[i]);
+                    fprintf(stderr, "[line %ud] Error: Unexpected character: %c\n", line_counter, file_contents[i]);
                     error_flag = TRUE;
                     break;
                 }
