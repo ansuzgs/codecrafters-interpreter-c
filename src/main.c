@@ -62,19 +62,19 @@ int main(int argc, char *argv[]) {
                 case ';':
                     printf("SEMICOLON ; null\n");
                     break;
+                case '!':
+                    if (file_contents[i+1] == '=') {
+                        printf("BANG_EQUAL != null\n");
+                    } else {
+                        printf("BANG ! null\n");
+                    }
+                    break;
                 case '=':
                     if(file_contents[i+1] == '=') {
                         printf("EQUAL_EQUAL == null\n");
                         i++;
                     } else {
                         printf("EQUAL = null\n");
-                    }
-                    break;
-                case '!':
-                    if (file_contents[i+1] == '=') {
-                        printf("BANG_EQUAL != null\n");
-                    } else {
-                        printf("BANG ! null\n");
                     }
                     break;
                 default:
