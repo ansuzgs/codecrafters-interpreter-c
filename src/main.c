@@ -51,6 +51,8 @@ int main(int argc, char *argv[]) {
                 case '+':
                     printf("PLUS + null\n");
                     break;
+                case '-':
+                    printf("MINUS - null\n");
                 }
             }
         }
